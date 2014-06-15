@@ -11,12 +11,12 @@ import java.util.*;
 public class DefaultStackBasedMachine implements StackBasedMachine {
 
     @Override
-    public int compute(Queue<String> queue) {
-           Stack<Integer> stack  = new Stack<Integer>();
+    public Double compute(Queue<String> queue) {
+           Stack<Double> stack  = new Stack<Double>();
 
         while(!queue.isEmpty()){
             if(!Operators.isOperator(queue.element()) ) {
-                stack.push(Integer.parseInt(queue.poll()));
+                stack.push(Double.parseDouble(queue.poll()));
             }else{
                 stack.push(Operators.get(queue.poll()).operate(stack.pop(), stack.pop()));
             }
@@ -26,7 +26,7 @@ public class DefaultStackBasedMachine implements StackBasedMachine {
     }
 
     @Override
-    public int compute(String queue) {
+    public Double compute(String queue) {
         return compute(new LinkedList<String>(Arrays.asList(queue.split(" "))));
     }
 }

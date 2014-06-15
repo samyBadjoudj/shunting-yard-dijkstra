@@ -8,6 +8,6 @@ import java.util.Queue;
  */
 public interface StackBasedMachine {
 
-    public  int compute(Queue<String> queue);
-    public  int compute(String queue);
+    public  Double compute(Queue<String> queue);
+    public  Double compute(String queue);
 }

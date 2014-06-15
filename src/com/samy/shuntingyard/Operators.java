@@ -15,7 +15,7 @@ public class Operators
         final int priority;
         Operator(int p) { priority = p; }
 
-        public int operate(int number2, int number){
+        public Double operate(Double number2, Double number){
 
             switch (this){
                 case ADDITION:
@@ -26,7 +26,7 @@ public class Operators
                     return  number * number2;
                 case DIVISION:
                     return number / number2;
-                default: return 0;
+                default: return 0.0;
 
             }
         }
