@@ -18,10 +18,10 @@ public class Operators
     }
 
     private static Map<String, Operator> allOperators = new HashMap<String, Operator>() {{
-        put("+", Operator.ADDITION);
-        put("-", Operator.SUBTRACTION);
         put("*", Operator.MULTIPLICATION);
         put("/", Operator.DIVISION);
+        put("-", Operator.SUBTRACTION);
+        put("+", Operator.ADDITION);
     }};
 
 
