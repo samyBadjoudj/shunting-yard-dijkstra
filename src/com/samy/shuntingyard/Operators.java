@@ -9,11 +9,27 @@ import java.util.Map;
  */
 public class Operators
 {
-    private enum Operator{
+    public enum Operator{
 
         ADDITION(1), SUBTRACTION(1), MULTIPLICATION(5), DIVISION(5);
         final int priority;
         Operator(int p) { priority = p; }
+
+        public int operate(int number2, int number){
+
+            switch (this){
+                case ADDITION:
+                    return  number + number2;
+                case SUBTRACTION:
+                    return  number - number2;
+                case MULTIPLICATION:
+                    return  number * number2;
+                case DIVISION:
+                    return number / number2;
+                default: return 0;
+
+            }
+        }
 
     }
 
@@ -27,6 +43,10 @@ public class Operators
 
     public static boolean isOperator(String operator){
         return allOperators.containsKey(operator);
+    }
+
+    public static Operator get(String operator){
+        return allOperators.get(operator);
     }
 
     public static boolean isRightOperatorPrior(String operator, String otherOperator){
