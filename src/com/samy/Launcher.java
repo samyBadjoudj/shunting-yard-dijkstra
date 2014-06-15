@@ -1,5 +1,7 @@
-package com.samy.shuntingyard;
+package com.samy;
 
+import com.samy.shuntingyard.DefaultShuntingYard;
+import com.samy.shuntingyard.ShuntingYard;
 import com.samy.stackmachine.DefaultStackBasedMachine;
 import com.samy.stackmachine.StackBasedMachine;
 
