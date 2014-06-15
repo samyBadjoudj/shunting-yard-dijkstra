@@ -18,7 +18,7 @@ public class Launcher {
 
         System.out.println("----INFIX TO POSTFIX----");
         System.out.println("A) ( 252 + 433 ) + 92.5 * 2  ---> " +shuntingYard.getPostFixNotation("( 252 + 433 ) + 92.5 * 2"));
-        System.out.println("B) ( 0 - 1 ) * 4 * 5 ---> " +shuntingYard.getPostFixNotation("( 0 - 1 ) * 4.0 * 5"));
+        System.out.println("B) ( 0 - 1 ) * 4.0 * 5 ---> " +shuntingYard.getPostFixNotation("( 0 - 1 ) * 4.0 * 5"));
         System.out.println("");
         System.out.println("----STACK BASED MACHINE----");
         System.out.println("Computation of A) " + stackBasedMachine.compute(shuntingYard.getPostFixNotation("( 0 - 1 ) * 4.0 * 5")));
